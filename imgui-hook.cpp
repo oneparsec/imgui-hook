@@ -1,4 +1,5 @@
 #define WIN32_LEAN_AND_MEAN
+#define DEFAULT_KEY VK_RSHIFT
 
 #include <windows.h>
 #include <cocos2d.h>
@@ -6,7 +7,7 @@
 
 using namespace cocos2d;
 
-int toggleKey = VK_RSHIFT;
+int toggleKey = DEFAULT_KEY;
 
 void _stub() {}
 std::function<void()> g_drawFunc = _stub;
