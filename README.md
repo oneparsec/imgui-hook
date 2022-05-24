@@ -3,7 +3,7 @@ ImGui hook by matcool with extra additions. I created it to use as a submodule i
 
 # How to use it?
 
-First of all, you should create main rendering function, where you can put `ImGui::Begin("Window Title")` and stuff like that.
+First of all, you should create main rendering function, where you can put `ImGui::Begin("Window Title")` and [stuff like that](https://github.com/ocornut/imgui#usage).
 To set rendering function, call a `ImGuiHook::setRenderFunction(<YOUR-RENDER-FUNCTION-NAME>)`.
 
 Then, if you want to, you can create initialization function. It will run only one time, on the program startup. It could be used for style and font applying.
