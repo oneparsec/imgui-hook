@@ -13,4 +13,4 @@ Also, you can set key to show window using `ImGuiHook::setToggleKey(<VIRTUAL-KEY
 
 -------------
 
-If you want to help, feel free to open a pull request or write in a Disc
+If you find some errors or inaccurate documentation, feel free to open a pull request or write in a Discord (asimonov#0119).
