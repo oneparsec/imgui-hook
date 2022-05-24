@@ -10,3 +10,7 @@ Then, if you want to, you can create initialization function. It will run only o
 To set init function, call a `ImGuiHook::setInitFunction(<YOUR-INIT-FUNCTION-NAME>)`.
 
 Also, you can set key to show window using `ImGuiHook::setToggleKey(<VIRTUAL-KEY-CODE>)` to [set a key](https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes) and use `ImGuiHook::setToggleCallback([]() {<WHATEVER-YOU-WANT-TO-DO>});`.
+
+-------------
+
+If you want to help, feel free to open a pull request or write in a Disc
