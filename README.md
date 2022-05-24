@@ -9,4 +9,4 @@ To set rendering function, call a `ImGuiHook::setRenderFunction(<YOUR-RENDER-FUN
 Then, if you want to, you can create initialization function. It will run only one time, on the program startup. It could be used for style and font applying.
 To set init function, call a `ImGuiHook::setInitFunction(<YOUR-INIT-FUNCTION-NAME>)`.
 
-Also, you can set key to show window using `ImGuiHook::setToggleKey(<VIRTUAL-KEY-CODE>)` to [https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes]set a key and use `ImGuiHook::setToggleCallback([]() {<WHATEVER-YOU-WANT-TO-DO>});`.
+Also, you can set key to show window using `ImGuiHook::setToggleKey(<VIRTUAL-KEY-CODE>)` to [set a key](https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes) and use `ImGuiHook::setToggleCallback([]() {<WHATEVER-YOU-WANT-TO-DO>});`.
