@@ -12,5 +12,60 @@ To set init function, call a `ImGuiHook::setInitFunction(<YOUR-INIT-FUNCTION-NAM
 Also, you can set key to show window using `ImGuiHook::setToggleKey(<VIRTUAL-KEY-CODE>)` to [set a key](https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes) and use `ImGuiHook::setToggleCallback([]() {<WHATEVER-YOU-WANT-TO-DO>});`.
 
 -------------
+# Example
+
+```
+
+#include <MinHook.h>
+#include <imgui.h>
+#include <imgui-hook.h>
+#include <cocos2d.h>
+
+void RenderUI()
+{
+    if(show)
+    {
+        ImGui::Begin("Window Title");
+        ImGui::Text("Hello World!");
+        ImGui::End();
+    }
+}
+
+void InitUI()
+{
+    std::cout << "ImGuiHook initialized" << std::endl;
+}
+
+DWORD WINAPI MainThread(void* hModule) {
+
+	ImGuiHook::setRenderFunction(RenderUI);
+	ImGuiHook::setToggleCallback([]() {
+		show = !show;
+	});
+	ImGuiHook::setToggleKey(VK_INSERT);
+    ImGuiHook::setInitFunction(InitUI);
+
+	auto cocosBase = GetModuleHandleA("libcocos2d.dll");
+	MH_Initialize();
+	ImGuiHook::setupHooks([](void* target, void* hook, void** trampoline) {
+		MH_CreateHook(target, hook, trampoline);
+	});
+	MH_EnableHook(MH_ALL_HOOKS);
+
+	return 0;
+}
+
+BOOL APIENTRY DllMain(HMODULE module, DWORD reason, LPVOID) {
+	if (reason == DLL_PROCESS_ATTACH) {
+		DisableThreadLibraryCalls(module);
+		CreateThread(0, 0, MainThread, module, 0, 0);
+	}
+	return TRUE;
+}
+
+```
+
+
+-------------
 
 If you find some errors or inaccurate documentation, feel free to open a pull request or write in a Discord (asimonov#0119).
