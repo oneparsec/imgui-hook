@@ -19,4 +19,5 @@ target_include_directories(imgui-hook PRIVATE imgui
     ../cocos-headers/cocos2dx/platform/win32
     ../cocos-headers/cocos2dx/platform/third_party/win32
     ../cocos-headers/cocos2dx/platform/third_party/win32/OGLES
+    ../imgui
 )
