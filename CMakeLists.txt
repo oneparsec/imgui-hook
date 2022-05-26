@@ -13,6 +13,7 @@ add_library(imgui-hook STATIC
 )
 set_property(TARGET imgui-hook PROPERTY CXX_STANDARD 17)
 target_include_directories(imgui-hook PRIVATE imgui
+    ../imgui
     ../cocos-headers/cocos2dx/
     ../cocos-headers/cocos2dx/include
     ../cocos-headers/cocos2dx/kazmath/include
