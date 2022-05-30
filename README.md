@@ -33,7 +33,7 @@ void RenderUI()
 
 void InitUI()
 {
-    std::cout << "ImGuiHook initialized" << std::endl;
+	MessageBox(nullptr, "ImGui initialized!", "Info", MB_OK);
 }
 
 DWORD WINAPI MainThread(void* hModule) {
@@ -43,7 +43,7 @@ DWORD WINAPI MainThread(void* hModule) {
 		show = !show;
 	});
 	ImGuiHook::setToggleKey(VK_INSERT);
-    ImGuiHook::setInitFunction(InitUI);
+    	ImGuiHook::setInitFunction(InitUI);
 
 	auto cocosBase = GetModuleHandleA("libcocos2d.dll");
 	MH_Initialize();
