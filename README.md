@@ -15,11 +15,11 @@ Also, you can set key to show window using `ImGuiHook::setToggleKey(<VIRTUAL-KEY
 # Example
 
 ```
-
 #include <MinHook.h>
 #include <imgui.h>
 #include <imgui-hook.h>
 #include <cocos2d.h>
+#include <Windows.h>
 
 void RenderUI()
 {
