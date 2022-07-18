@@ -15,6 +15,5 @@ Also, you can set key to show window using `ImGuiHook::setToggleKey(<VIRTUAL-KEY
 # Example
 
 View [this example](https://github.com/oneparsec/imgui-mod-example).
--------------
 
 If you find some errors or inaccurate documentation, feel free to open a pull request or write in a Discord (asimonov#0119).
